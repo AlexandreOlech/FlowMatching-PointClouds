@@ -1,0 +1,25 @@
+preprocess:
+  datasets_path: /home/olx/datasets # ---- TO SPECIFY ----
+  num_pts: 2048
+
+train:
+  categ: chair # airplane, table, etc. # ---- TO SPECIFY ----
+  float32_matmul_precision: medium
+  precision: 16-mixed
+  dataset_path: /home/olx/datasets/ShapeNet_torch # ---- TO SPECIFY ----
+  batch_size: 32
+  lr: 0.001
+  max_epochs: 100
+  check_val_every_n_epoch: 1
+  log_every_n_steps: 10
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 4
+  enable_checkpointing: true
+  num_workers: auto
+  categ_to_id_path: categ_to_id.json
+
+sample:
+    ckpt_path: /home/olx/FlowMatching-PointClouds/logs/version_22/checkpoints/epoch16.ckpt # ---- TO SPECIFY ----
+    num_steps: 100
+    num_pts: 2048
+    num_obj: 10
