@@ -34,7 +34,7 @@
 
 ## Sampling & Visualization
 
-- In `sample.py`, specify the path to the checkpoint of the trained model. By default, checkpoints of trained models are stored in the `logs` folder. You can also use the pre-trained checkpoint at the root level of the repository.
+- In the `sample` section of `configs/default.yaml`, specify the path to the checkpoint of the trained model. By default, checkpoints of trained models are stored in the `logs` folder. You can also use the pre-trained checkpoint at the root level of the repository.
 - Run:
   ```bash
   python sample.py
