@@ -5,6 +5,13 @@
 - pytorch-lightning 2.5.5
 - polyscope 2.4.0
 - tensorboard 2.20.0
+- Run:
+  ```bash
+  pip install torch==2.1.0+cu121 \
+    --index-url https://download.pytorch.org/whl/cu121 \
+    numpy==1.26.3 pytorch-lightning==2.5.5 polyscope==2.4.0 tensorboard==2.20.0
+  ```
+
 
 ## Download Data
 
