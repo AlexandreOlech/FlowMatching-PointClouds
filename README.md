@@ -1,6 +1,7 @@
 ## Requirements
 - python 3.10.18
 - pytorch 2.1.0+cu121
+- numpy 1.26.4
 - pytorch-lightning 2.5.5
 - polyscope 2.4.0
 - tensorboard 2.20.0
