@@ -1,6 +1,6 @@
 preprocess:
-  old_dataset_path: "/home/olx/datasets_tutoGen/ShapeNetCore.v2.PC15k"
-  new_dataset_path: "/home/olx/datasets_tutoGen/shapenet_torch"
+  old_dataset_path: "/home/olx/datasets_tutoGen/ShapeNetCore.v2.PC15k" # ---- TO SPECIFY ----
+  new_dataset_path: "/home/olx/datasets_tutoGen/shapenet_torch" # ---- TO SPECIFY ----
   num_pts: 2048
 
 train:
