@@ -27,8 +27,8 @@ if __name__ == "__main__":
         cfg = yaml.safe_load(f)['preprocess']
 
     num_pts = cfg["num_pts"]
-    old_dataset_path = cfg["old_dataste_path"]
-    new_dataset_path = cfg["new_dataste_path"]
+    old_dataset_path = cfg["old_dataset_path"]
+    new_dataset_path = cfg["new_dataset_path"]
     
     for object_id in tqdm(os.listdir(old_dataset_path),desc="objects"):
         splits = ["train", "test", "val"]

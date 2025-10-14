@@ -1,6 +1,6 @@
 preprocess:
-  old_dataset_path: "/home/olx/datasets_tutoGen/ShapeNetCore.v2.PC15k" # ---- TO SPECIFY ----
-  new_dataset_path: "/home/olx/datasets_tutoGen/shapenet_torch" # ---- TO SPECIFY ----
+  old_dataset_path: "/home/olx/datasets/ShapeNetCore.v2.PC15k" # ---- TO SPECIFY ----
+  new_dataset_path: "/home/olx/datasets/shapenet_torch" # ---- TO SPECIFY ----
   num_pts: 2048
 
 train:
@@ -20,7 +20,6 @@ train:
   log_every_n_steps: 10
 
 sample:
-    ckpt_path: /home/olx/FlowMatching-PointClouds/logs/version_22/checkpoints/epoch16.ckpt # ---- TO SPECIFY ----
+    ckpt_path: /home/olx/FlowMatching-PointClouds/chair-epoch43.ckpt # ---- TO SPECIFY ----
     num_steps: 100
     num_pts: 2048
-    num_obj: 10
