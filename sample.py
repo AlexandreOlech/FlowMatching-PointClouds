@@ -23,12 +23,13 @@ if __name__ == "__main__":
     model.eval()
 
     D = 3
-    B = 5
+    B = 32
     h = 1/num_steps
     t = torch.zeros(B, device=device)
     x = torch.randn(B, D, num_pts, device=device)
 
     ps.init()
+    ps.set_ground_plane_mode("none")
     for j in range(B):
         ps.register_point_cloud(
             f"object {j}, step 1",
@@ -43,7 +44,7 @@ if __name__ == "__main__":
             if (i+1)%20==0:
                 for j in range(B):
                     obj_shift = torch.tensor([0,j*5,0])
-                    time_shift = torch.tensor([i/10,0,0])
+                    time_shift = torch.tensor([-i/10,0,0])
                     ps.register_point_cloud(
                         f"object {j}, step {i+1}", 
                         x[j].permute(1,0).cpu() + obj_shift + time_shift,
@@ -52,7 +53,7 @@ if __name__ == "__main__":
             if (i+1)==num_steps:
                 for j in range(B):
                     obj_shift = torch.tensor([0,j*5,0])
-                    time_shift = torch.tensor([i/10,0,0])
+                    time_shift = torch.tensor([-i/10,0,0])
                     ps.register_point_cloud(
                         f"object {j}, step {i+1}", 
                         x[j].permute(1,0).cpu() + obj_shift + time_shift,
