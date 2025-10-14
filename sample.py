@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     with torch.no_grad():
         for i in range(num_steps):        
-            dx = model(x,t)
-            x = x + h*dx
+            u = model(x,t)
+            x = x + h*u
             t = t + h
 
     ps.init()

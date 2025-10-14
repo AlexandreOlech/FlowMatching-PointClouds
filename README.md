@@ -1,5 +1,5 @@
 ## Requirements
-- python 3.10.18
+- python 3.10
 - pytorch 2.1.0+cu121
 - numpy 1.26.3
 - pytorch-lightning 2.5.5
@@ -9,10 +9,11 @@
   ```bash
   pip install torch==2.1.0+cu121 \
     --index-url https://download.pytorch.org/whl/cu121 \
-    numpy==1.26.3 pytorch-lightning==2.5.5 polyscope==2.4.0 tensorboard==2.20.0
+    numpy==1.26.3  
   ```
-
-
+  ```bash
+  pip install pytorch-lightning polyscope tensorboard
+  ```
 ## Download Data
 
 - Download the ShapeNet dataset using this link:  
